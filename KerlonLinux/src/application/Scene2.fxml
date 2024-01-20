@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
+   <children>
+      <Button layoutX="501.0" layoutY="458.0" mnemonicParsing="false" onAction="#switchToScene3" prefHeight="25.0" prefWidth="89.0" text="Avançar&gt;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="logoutButton" layoutX="615.0" layoutY="458.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="89.0" text="Cancelar">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Pane fx:id="bgPane" layoutY="110.0" prefHeight="317.0" prefWidth="757.0">
+         <children>
+            <CheckBox fx:id="checkBoxTop" layoutX="54.0" layoutY="275.0" mnemonicParsing="false" text="Aceito os termos de licença" />
+            <ScrollPane layoutX="54.0" layoutY="36.0" prefHeight="225.0" prefWidth="649.0">
+               <content>
+                  <Label alignment="TOP_LEFT" prefHeight="343.0" prefWidth="633.0" text="TERMOS E CONDIÇÕES DE USO DO KERLON LINUX1. LICENÇA DE SOFTWARE1.1 Ao instalar, utilizar ou acessar o Kerlon Linux, você concorda em cumprir os termos e condições estabelecidos neste documento.1.2 O Kerlon Linux é licenciado, não vendido. A Kerlon Software concede a você uma licença limitada, não exclusiva, intransferível e revogável para usar o software apenas de acordo com estes termos.2. DIREITOS DE PROPRIEDADE INTELECTUAL2.1 Todos os direitos de propriedade intelectual relacionados ao Kerlon Linux são de propriedade exclusiva da Kerlon Software.2.2 Você concorda em não desmontar, descompilar ou fazer engenharia reversa do código-fonte do Kerlon Linux, exceto quando permitido pela legislação aplicável.3. ATUALIZAÇÕES E SUPORTE3.1 A Kerlon Software pode fornecer atualizações e suporte ao Kerlon Linux, a critério exclusivo da empresa.3.2 A utilização de versões desatualizadas do Kerlon Linux pode resultar em limitações de funcionalidade e segurança.4. RESPONSABILIDADES DO USUÁRIO4.1 Você é responsável por manter a confidencialidade de qualquer senha ou credencial de acesso associada ao Kerlon Linux.4.2 O uso do Kerlon Linux para atividades ilegais ou prejudiciais é estritamente proibido.5. LIMITAÇÃO DE RESPONSABILIDADE5.1 Em nenhuma circunstância, a Kerlon Software será responsável por quaisquer danos diretos, indiretos, incidentais, especiais, consequenciais ou exemplares decorrentes do uso ou incapacidade de usar o Kerlon Linux.6. ENCERRAMENTO DA LICENÇA6.1 A Kerlon Software reserva-se o direito de encerrar sua licença de uso do Kerlon Linux a qualquer momento, caso você viole estes termos.7. DISPOSIÇÕES GERAIS7.1 Estes termos representam o acordo completo entre você e a Kerlon Software em relação ao Kerlon Linux e substituem quaisquer acordos anteriores.7.2 A legislação do Brasil regerá estes termos, com exclusão de suas disposições sobre conflitos de leis.Ao utilizar o Kerlon Linux, você concorda com estes termos e condições. Caso não concorde, por favor, desinstale o software." wrapText="true">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+      <Button layoutX="402.0" layoutY="458.0" mnemonicParsing="false" onAction="#switchToScene1" prefHeight="25.0" prefWidth="89.0" text="&lt;Voltar">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="titleLabel" layoutX="50.0" layoutY="37.0" prefHeight="40.0" prefWidth="247.0" text="Termos de licença" wrapText="true">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="65.0" fitWidth="61.0" layoutX="645.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../kerlonLinux2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

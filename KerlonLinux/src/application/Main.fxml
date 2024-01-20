@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
+   <children>
+      <Button layoutX="501.0" layoutY="458.0" mnemonicParsing="false" onAction="#switchToScene2" prefHeight="25.0" prefWidth="89.0" text="Avançar&gt;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="logoutButton" layoutX="615.0" layoutY="458.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="89.0" text="Cancelar">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Pane fx:id="bgPane" prefHeight="430.0" prefWidth="757.0">
+         <children>
+            <ImageView fitHeight="430.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../banner.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="titleLabel" layoutX="292.0" layoutY="56.0" prefHeight="82.0" prefWidth="413.0" text="Bem vindo ao Assistente de Instalação de Kerlon Linux" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="textLabel" layoutX="292.0" layoutY="161.0" prefHeight="17.0" prefWidth="413.0" text="Este programa irá instalar o Kerlon Linux 1.0.3 no seu computador.">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="textLabel" layoutX="292.0" layoutY="213.0" prefHeight="39.0" prefWidth="413.0" text="É recomendado que você feche todas as aplicações abertas antes de continuar para evitar conflitos durante a instalação." wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="textLabel" layoutX="292.0" layoutY="283.0" prefHeight="39.0" prefWidth="413.0" text="Clique avançar para continuar, ou Cancelar para sair do programa de instalação. " wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
