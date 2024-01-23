@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.swing.JOptionPane;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -36,8 +37,10 @@ public class SceneController {
 	@FXML
 	private TextField textFieldFolder;
 	
+	
 	// trocar pra cena 1
 	public void switchToScene1(ActionEvent e) throws IOException {
+		
 		setRoot( FXMLLoader.load( getClass().getResource("Main.fxml") ) );
 		setStage( (Stage) ( (Node) e.getSource() ).getScene().getWindow() );
 		setScene( new Scene( getRoot() ) );
@@ -50,6 +53,7 @@ public class SceneController {
 	
 	// trocar pra cena 2
 	public void switchToScene2(ActionEvent e) throws IOException {
+		
 		setRoot( FXMLLoader.load( getClass().getResource("Scene2.fxml") ) );
 		setStage( (Stage) ( (Node) e.getSource() ).getScene().getWindow() );
 		setScene( new Scene( getRoot() ) );
@@ -62,7 +66,8 @@ public class SceneController {
 	
 	// trocar pra cena 3
 	public void switchToScene3(ActionEvent e) throws IOException {
-		if ( checkBoxTop.isSelected() ) {
+		if ( getCheckBoxTop().isSelected() ) {
+			
 			setRoot( FXMLLoader.load( getClass().getResource("Scene3.fxml") ) );
 			setStage( (Stage) ( (Node) e.getSource() ).getScene().getWindow() );
 			setScene( new Scene ( getRoot() ) );
@@ -88,7 +93,8 @@ public class SceneController {
 		}
 	}
 	
-	public void switchToScene4(ActionEvent e) throws IOException {
+	// trocar pra cena 4
+	public void switchToScene4(ActionEvent e) throws IOException, InterruptedException {
 		if ( getTextFieldFolder().getText().equals("") ) {
 			
 			Alert alertTextField = new Alert(AlertType.WARNING);
@@ -110,9 +116,17 @@ public class SceneController {
 			setScene( new Scene ( getRoot() ) );
 			getScene().getStylesheets().add( getClass().getResource("application.css").toExternalForm() );
 			
+			Alert alertInstalation = new Alert(AlertType.INFORMATION);
+			alertInstalation.setTitle("Kerlon Linux: The OS");
+			alertInstalation.setHeaderText("Instalação concluída!");
+			
 			System.out.println("Passou pra cena 4");
 			getStage().setScene( getScene() );
 			getStage().show();
+		
+			Thread.sleep(5000);
+			alertInstalation.showAndWait();
+			getStage().close();
 		}
 	}
 	
@@ -128,6 +142,7 @@ public class SceneController {
 		getStage().getIcons().add(icon);
 		
 		if (alert.showAndWait().get() == ButtonType.OK) {
+			
 			System.out.println("Cancelou...");
 			setStage((Stage) scenePane.getScene().getWindow());
 			getStage().close();
